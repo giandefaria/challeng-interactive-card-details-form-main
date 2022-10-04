@@ -1,0 +1,19 @@
+body {
+    width: 1440px;
+}
+
+.background-desktop {
+    float: left;
+}
+
+.front-card {
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+
+.back-card {
+    position: absolute;
+    left: 270px;
+    top: 500px;
+}
