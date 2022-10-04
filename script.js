@@ -19,20 +19,22 @@ cardNumber.addEventListener('keyup',() => {
 
 let cardMonth = document.getElementById("cardMonth");
 let duplicateCardMonth = document.getElementById("duplicateCardMonth");
+let cardYear = document.getElementById("cardYear");
+let duplicateCardYear = document.getElementById("duplicateCardYear");
 
-cardMonth.addEventListener('keyup',() => {
-    duplicateCardMonth.value = cardMonth.value;
+cardMonth.addEventListener, cardYear.addEventListener('keyup',() => {
+    duplicateCardMonth.value = cardMonth.value + "/" + cardYear.value; 
 })
 
 
 // card year duplicate
 
-let cardYear = document.getElementById("cardYear");
+/*let cardYear = document.getElementById("cardYear");
 let duplicateCardYear = document.getElementById("duplicateCardYear");
 
 cardYear.addEventListener('keyup',() => {
-    duplicateCardYear.value = cardYear.value;
-});
+    duplicateCardYear.value = "/" + cardYear.value;
+});*/
 
 // card CVC duplicate
 
