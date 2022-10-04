@@ -1,5 +1,15 @@
 body {
     width: 1440px;
+    font-family: 'Space Grotesk', sans-serif;
+    
+}
+::placeholder {
+    color: hsl(0, 0%, 100%);
+}
+
+input {
+    font-family: 'Space Grotesk', sans-serif;
+   
 }
 
 .background-desktop {
@@ -7,13 +17,64 @@ body {
 }
 
 .front-card {
+    font-family: 'Space Grotesk', sans-serif;
     position: absolute;
     left: 200px;
     top: 200px;
 }
 
+#duplicateCardHolder {
+    background: transparent;
+    border-style: none;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 2px;
+    position: absolute;
+    left: 35px;
+    top: 200px;
+    
+}
+
+#duplicateCardNumber {
+    width: 400px;
+    background: transparent;
+    border-style: none;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 2px;
+    font-size: 27px;
+    position: absolute;
+    left: 35px;
+    top: 140px;
+}
+
+#duplicateCardMonth{
+    background: transparent;
+    border-style: none;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 2px;
+    position: absolute;
+    left: 350px;
+    top: 200px;
+    width: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+#duplicateCardYear{
+    background: transparent;
+    border-style: none;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 2px;
+    position: absolute;
+    left: 380px;
+    top: 200px;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+}
+
 .back-card {
     position: absolute;
     left: 270px;
-    top: 500px;
+    top: 480px;
 }
+

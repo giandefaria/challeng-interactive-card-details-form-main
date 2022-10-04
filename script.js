@@ -22,7 +22,8 @@ let duplicateCardMonth = document.getElementById("duplicateCardMonth");
 
 cardMonth.addEventListener('keyup',() => {
     duplicateCardMonth.value = cardMonth.value;
-});
+})
+
 
 // card year duplicate
 

@@ -6,15 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
     
 </head>
 <body>
-
     <img class="background-desktop" src="images/bg-main-desktop.png" alt="background">
-
-    <img class="front-card" src="images/bg-card-front.png" alt="front card">
-    <img class="back-card" src="images/bg-card-back.png" alt="back card">
-       
 
     <form action="#">
         <label for="cardHolder">CARDHOLDER NAME</label>
@@ -32,13 +30,24 @@
         <input type="submit" value="Confirm">
        
     </form>
+
+    <div class="front-card">
+    <img src="images/bg-card-front.png" alt="front card">
+    <input type="text" id="duplicateCardHolder" placeholder="NAME">
+    <input type="number" id="duplicateCardNumber" placeholder="0000 0000 0000 0000">
+    <input type="number" id="duplicateCardMonth" placeholder="MM"> <input type="number" id="duplicateCardYear" placeholder="YY">
+    </div>
+
+    <div class="back-card">
+    <img src="images/bg-card-back.png" alt="back card">
+    </div>
+       
     
     <hr>
-    <input type="text" id="duplicateCardHolder" placeholder="Card holder name">
+    
+    
 
-    <input type="number" id="duplicateCardNumber" placeholder="Card number">
-
-    <input type="number" id="duplicateCardMonth" placeholder="MM"> <input type="number" id="duplicateCardYear" placeholder="YY">
+    
      
     <input type="number" id="duplicateCardCvc" placeholder="e.g. 123">
 
