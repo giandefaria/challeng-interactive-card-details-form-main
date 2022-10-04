@@ -10,7 +10,7 @@
 <body>
     <form action="#">
         <label for="cardHolder">CARDHOLDER NAME</label>
-        <input id="cardHolder" type="text" placeholder="Card holder name">
+        <input id="cardHolder" type="text" placeholder="Card holder name" required>
 
         <label for="cardNumber">CARD NUMBER</label>
         <input id="cardNumber" type="number" placeholder="Card number">
@@ -20,9 +20,11 @@
 
         <label for="cardCvc">CVC</label>
         <input id="cardCvc" type="number" placeholder="e.g. 123">
+
+        <input type="submit" value="Confirm">
        
     </form>
-
+    
     <hr>
     <input type="text" id="duplicateCardHolder" placeholder="Card holder name">
 
