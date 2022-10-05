@@ -15,6 +15,17 @@ cardNumber.addEventListener('keyup',() => {
     duplicateCardNumber.value = cardNumber.value;
 });
 
+//cardNumber.value
+
+//function for a space every four chars
+function formatCreditCard() {
+    var x = document.getElementById("cardNumber");
+    var index = x.value.lastIndexOf(' ');
+    var test = x.value.substr(index + 1);
+    if (test.length === 4 && x.value.length < 16)
+         x.value = x.value + ' ';
+}
+
 // card month duplicate
 
 let cardMonth = document.getElementById("cardMonth");
