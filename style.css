@@ -24,22 +24,19 @@ input {
 }
 
 .creditCardBox {
-    display: inline-block;
     box-sizing: border-box;
-    border: groove;
-    border-color: aliceblue;
-    width: 500px;
+    width: 350px;
     height: 300px;
     display: inline-block;
-    position: absolute;
-    top: 200px;
-    right: 25px;
+    position: relative;
+    top: 340px;
+    left: 350px;
 
 }
 
 #cardHolder, #cardNumber {
-    width: -webkit-fill-available;
-    height: 30px;
+    width: 344px;
+    height: 35px;
     border-radius: 7px;
     border-style: solid;
     border-width: thin;
@@ -56,7 +53,7 @@ input {
 
 #cardYear, #cardMonth {
     width: 70px;
-    height: 30px;
+    height: 35px;
     border-radius: 7px;
     border-style: solid;
     border-width: thin;
@@ -72,9 +69,8 @@ input {
 }
 
 #cardCvc {
-    width: 130px;
-    height: 30px;
-    margin: ;
+    width: 168px;
+    height: 35px;
     border-radius: 7px;
     border-style: solid;
     border-width: thin;
@@ -86,6 +82,13 @@ input {
 
 input[type=submit] {
     display: block;
+    margin: auto;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    font-size: medium;
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
 }
 
 #duplicateCardHolder {
