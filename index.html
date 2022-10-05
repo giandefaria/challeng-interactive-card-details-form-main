@@ -15,19 +15,26 @@
 <body>
     <img class="background-desktop" src="images/bg-main-desktop.png" alt="background">
 
-    <form>
-        <label for="cardHolder">CARDHOLDER NAME</label>
-        <input id="cardHolder" type="text" placeholder="Card holder name" required>
+    <form class="creditCardBox">
+        <div>
+            <label for="cardHolder">CARDHOLDER NAME</label>
+            <br>
+            <input id="cardHolder" type="text" placeholder="Card holder name" required>
+            <br>
+            <label for="cardNumber">CARD NUMBER</label>
+            <br>
+            <input id="cardNumber" type="text" placeholder="Card number" maxlength="19"  onkeyup="formatCreditCard()">
+        </div>
 
-        <label for="cardNumber">CARD NUMBER</label>
-        <input id="cardNumber" type="text" placeholder="Card number" maxlength="19"  onkeyup="formatCreditCard()">
+        <div class="cardDate">
+            <label for="cardYear">EXP. DATE (MM/YY)</label><br>
+            <input id="cardMonth" type="number" placeholder="MM"> <input id="cardYear" type="number" placeholder="YY">
+        </div>
 
-        <label for="cardYear">EXP. DATE (MM/YY)</label>
-        <input id="cardMonth" type="number" placeholder="MM"> <input id="cardYear" type="number" placeholder="YY">
-
-        <label for="cardCvc">CVC</label>
-        <input id="cardCvc" type="text" placeholder="e.g. 123" maxlength="3">
-
+        <div class="cvc">
+            <label for="cardCvc">CVC</label><br>
+            <input id="cardCvc" type="text" placeholder="e.g. 123" maxlength="3">
+        </div>
         <input type="submit" value="Confirm">
        
     </form>
@@ -43,11 +50,7 @@
     <img src="images/bg-card-back.png" alt="back card">
     <input type="number" id="duplicateCardCvc" placeholder="000">
     </div>
-       
-    
-    <hr>
-    
-      
+
 
     <script src="script.js"></script>
 </body>

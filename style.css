@@ -23,6 +23,71 @@ input {
     top: 200px;
 }
 
+.creditCardBox {
+    display: inline-block;
+    box-sizing: border-box;
+    border: groove;
+    border-color: aliceblue;
+    width: 500px;
+    height: 300px;
+    display: inline-block;
+    position: absolute;
+    top: 200px;
+    right: 25px;
+
+}
+
+#cardHolder, #cardNumber {
+    width: -webkit-fill-available;
+    height: 30px;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: thin;
+    border-color: hsl(270, 3%, 87%);
+    /*border-color: hsl(278, 94%, 30%); ao ser selecionada */
+    margin-top: 7px;
+    margin-bottom: 25px;
+}
+
+.cardDate, .cvc {
+    display: inline-block;
+    
+}
+
+#cardYear, #cardMonth {
+    width: 70px;
+    height: 30px;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: thin;
+    border-color: hsl(270, 3%, 87%);
+    /*border-color: hsl(278, 94%, 30%); ao ser selecionada */
+    margin-top: 7px;
+    margin-bottom: 25px;
+
+}
+
+.cvc {
+    margin: 0 0 0 15px;
+}
+
+#cardCvc {
+    width: 130px;
+    height: 30px;
+    margin: ;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: thin;
+    border-color: hsl(270, 3%, 87%);
+    /*border-color: hsl(278, 94%, 30%); ao ser selecionada */
+    margin-top: 7px;
+    margin-bottom: 25px;
+}
+
+input[type=submit] {
+    display: block;
+}
+
 #duplicateCardHolder {
     background: transparent;
     border-style: none;
