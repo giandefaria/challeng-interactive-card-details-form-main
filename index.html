@@ -14,18 +14,18 @@
 <body>
     <img class="background-desktop" src="images/bg-main-desktop.png" alt="background">
 
-    <form action="#">
+    <form>
         <label for="cardHolder">CARDHOLDER NAME</label>
         <input id="cardHolder" type="text" placeholder="Card holder name" required>
 
         <label for="cardNumber">CARD NUMBER</label>
-        <input id="cardNumber" type="number" placeholder="Card number">
+        <input id="cardNumber" type="text" placeholder="Card number" maxlength="19"  onkeyup="formatCreditCard()">
 
         <label for="cardYear">EXP. DATE (MM/YY)</label>
         <input id="cardMonth" type="number" placeholder="MM"> <input id="cardYear" type="number" placeholder="YY">
 
         <label for="cardCvc">CVC</label>
-        <input id="cardCvc" type="number" placeholder="e.g. 123">
+        <input id="cardCvc" type="text" placeholder="e.g. 123" maxlength="3">
 
         <input type="submit" value="Confirm">
        
@@ -34,22 +34,19 @@
     <div class="front-card">
     <img src="images/bg-card-front.png" alt="front card">
     <input type="text" id="duplicateCardHolder" placeholder="NAME">
-    <input type="number" id="duplicateCardNumber" placeholder="0000 0000 0000 0000">
+    <input type="text" id="duplicateCardNumber" placeholder="0000 0000 0000 0000">
     <input type="text" id="duplicateCardMonth" placeholder="MM/YY"> 
     </div>
 
     <div class="back-card">
     <img src="images/bg-card-back.png" alt="back card">
+    <input type="number" id="duplicateCardCvc" placeholder="000">
     </div>
        
     
     <hr>
     
-    
-
-    
-     
-    <input type="number" id="duplicateCardCvc" placeholder="e.g. 123">
+      
 
     <script src="script.js"></script>
 </body>
