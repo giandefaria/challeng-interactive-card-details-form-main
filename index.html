@@ -15,11 +15,11 @@
 <body>
     <img class="background-desktop" src="images/bg-main-desktop.png" alt="background">
 
-    <form class="creditCardBox">
+    <form class="creditCardBox" onclick="validateCardMonth (), validateCardYear ()">
         <div>
             <label for="cardHolder">CARDHOLDER NAME</label>
             <br>
-            <input id="cardHolder" type="text" placeholder="Card holder name">
+            <input id="cardHolder" type="text" placeholder="Card holder name" onkeyup="validateCardHolder()">
             <span id="error1"></span>
             <br><br>
             <label for="cardNumber">CARD NUMBER</label>
@@ -31,7 +31,8 @@
 
         <div class="cardDate">
             <label for="cardYear">EXP. DATE (MM/YY)</label><br>
-            <input id="cardMonth" type="text" placeholder="MM" maxlength="2"> <input id="cardYear" type="text" placeholder="YY" maxlength="2">
+            <input id="cardMonth" type="text" placeholder="MM" maxlength="2" onkeyup="validateCardMonth ()"> <input id="cardYear" type="text" placeholder="YY" maxlength="2" onkeyup="validateCardYear ()">
+            <br><span id="error3"></span>
         </div>
 
         <div class="cvc">
