@@ -44,6 +44,7 @@ input {
     /*border-color: hsl(278, 94%, 30%); ao ser selecionada */
     margin-top: 7px;
     margin-bottom: 0px;
+    cursor: pointer;
 }
 
 .cardDate, .cvc {
@@ -78,18 +79,24 @@ input {
     border-color: hsl(270, 3%, 87%);
     /*border-color: hsl(278, 94%, 30%); ao ser selecionada */
     margin-top: 7px;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
 }
 
 input[type=submit] {
     display: block;
-    margin: auto;
+    margin: 20px auto;
     background-color: hsl(278, 68%, 11%);
     color: hsl(0, 0%, 100%);
     font-size: medium;
     width: 350px;
     height: 50px;
     border-radius: 10px;
+}
+
+span {
+    font-family: 'Space Grotesk', sans-serif;
+    color: hsl(0, 100%, 66%);
+    font-size: small;
 }
 
 #duplicateCardHolder {

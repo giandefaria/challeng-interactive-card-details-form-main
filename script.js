@@ -72,9 +72,11 @@ function validateCardNumber () {
     let error = document.getElementById("error2");
 
     if (containsAnyLetters(cardNumberValue)) {
-        error.textContent ="somente números";
+        error.textContent ="Wrong format, numbers only";
+        document.getElementById("cardNumber").style.borderColor = "hsl(0, 100%, 66%)";
     } else {
         error.textContent =""
+        document.getElementById("cardNumber").style.borderColor = "hsl(270, 3%, 87%)";
       }
 }
 
@@ -83,9 +85,11 @@ function validateCardHolder () {
     let error = document.getElementById("error1");
 
     if (containsAnyNumbers(cardHolder)) {
-        error.textContent = "Insira apenas letras";
+        error.textContent = "Wrong format, letters only";
+        document.getElementById("cardHolder").style.borderColor = "hsl(0, 100%, 66%)";
     } else {
         error.textContent = "";
+        document.getElementById("cardHolder").style.borderColor = "hsl(270, 3%, 87%)";
     }
 }
 
@@ -99,8 +103,10 @@ function validateCardMonth () {
 
     if(containsEmpty(cardMonth)) {
         error.textContent ="";
+        document.getElementById("cardMonth").style.borderColor = "hsl(270, 3%, 87%)";
     } else {
-        error.textContent = "não deixe em branco";
+        error.textContent = "Can't be blank";
+        document.getElementById("cardMonth").style.borderColor = "hsl(0, 100%, 66%)";
     }
 }
 
@@ -110,8 +116,22 @@ function validateCardYear () {
 
     if(containsEmpty(cardYear)) {
         error.textContent ="";
+        document.getElementById("cardYear").style.borderColor = "hsl(270, 3%, 87%)";
     } else {
-        error.textContent = "branco";
+        error.textContent = "Can't be blank";
+        document.getElementById("cardYear").style.borderColor = "hsl(0, 100%, 66%)";
     }
 }
 
+function validateCardCvc () {
+    let cardCvc = document.getElementById("cardCvc").value;
+    let error = document.getElementById("error4");
+
+    if(containsEmpty(cardCvc)) {
+        error.textContent ="";
+        document.getElementById("cardCvc").style.borderColor = "hsl(270, 3%, 87%)";
+    } else {
+        error.textContent = "Can't be blank";
+        document.getElementById("cardCvc").style.borderColor = "hsl(0, 100%, 66%)";
+    }
+}
