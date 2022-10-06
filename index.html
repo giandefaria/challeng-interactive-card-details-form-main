@@ -19,11 +19,14 @@
         <div>
             <label for="cardHolder">CARDHOLDER NAME</label>
             <br>
-            <input id="cardHolder" type="text" placeholder="Card holder name" required>
-            <br>
+            <input id="cardHolder" type="text" placeholder="Card holder name">
+            <span id="error1"></span>
+            <br><br>
             <label for="cardNumber">CARD NUMBER</label>
             <br>
-            <input id="cardNumber" type="text" placeholder="Card number" maxlength="19"  onkeyup="formatCreditCard()">
+            <input id="cardNumber" type="text" placeholder="Card number" maxlength="19" onkeyup="formatCreditCard(), validateCardNumber()">
+            <span id="error2"></span>
+            <br><br>
         </div>
 
         <div class="cardDate">
@@ -36,8 +39,10 @@
             <input id="cardCvc" type="text" placeholder="e.g. 123" maxlength="3">
         </div>
         <input type="submit" value="Confirm">
+    </form>    
+        
        
-    </form>
+    
 
     <div class="front-card">
     <img src="images/bg-card-front.png" alt="front card">
