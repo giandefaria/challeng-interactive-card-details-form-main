@@ -43,7 +43,7 @@ input {
     border-color: hsl(270, 3%, 87%);
     /*border-color: hsl(278, 94%, 30%); ao ser selecionada */
     margin-top: 7px;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
 }
 
 .cardDate, .cvc {
@@ -60,7 +60,7 @@ input {
     border-color: hsl(270, 3%, 87%);
     /*border-color: hsl(278, 94%, 30%); ao ser selecionada */
     margin-top: 7px;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
 
 }
 
