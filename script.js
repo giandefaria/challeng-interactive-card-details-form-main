@@ -55,3 +55,21 @@ let duplicateCardCvc = document.getElementById("duplicateCardCvc");
 cardCvc.addEventListener('keyup',() => {
     duplicateCardCvc.value = cardCvc.value;
 });
+
+//error scripts
+
+function containsAnyLetters(string) {
+   return /[a-zA-Z]/.test(string);
+   //regExp
+}
+
+function validateCardNumber () {
+    let cardNumberValue = document.getElementById("cardNumber").value;
+    let error = document.getElementById("error2");
+
+    if (containsAnyLetters(cardNumberValue)) {
+        error.textContent ="somente números";
+    } else {
+        error.textContent =""
+      }
+}
