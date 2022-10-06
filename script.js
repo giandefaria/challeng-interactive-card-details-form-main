@@ -62,6 +62,10 @@ function containsAnyLetters(string) {
    return /[a-zA-Z]/.test(string);
    //regExp
 }
+function containsAnyNumbers(string) {
+    return /[0-9]/.test(string);
+}
+
 
 function validateCardNumber () {
     let cardNumberValue = document.getElementById("cardNumber").value;
@@ -73,3 +77,41 @@ function validateCardNumber () {
         error.textContent =""
       }
 }
+
+function validateCardHolder () {
+    let cardHolder = document.getElementById("cardHolder").value;
+    let error = document.getElementById("error1");
+
+    if (containsAnyNumbers(cardHolder)) {
+        error.textContent = "Insira apenas letras";
+    } else {
+        error.textContent = "";
+    }
+}
+
+function containsEmpty(string) {
+    return /[\S]/.test(string);
+}
+
+function validateCardMonth () {
+    let cardMonth = document.getElementById("cardMonth").value;
+    let error = document.getElementById("error3");
+
+    if(containsEmpty(cardMonth)) {
+        error.textContent ="";
+    } else {
+        error.textContent = "não deixe em branco";
+    }
+}
+
+function validateCardYear () {
+    let cardYear = document.getElementById("cardYear").value;
+    let error = document.getElementById("error3");
+
+    if(containsEmpty(cardYear)) {
+        error.textContent ="";
+    } else {
+        error.textContent = "branco";
+    }
+}
+
