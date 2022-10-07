@@ -37,18 +37,6 @@ cardMonth.addEventListener, cardYear.addEventListener('keyup',() => {
     duplicateCardMonth.value = cardMonth.value + "/" + cardYear.value; 
 })
 
-
-// card year duplicate
-
-/*let cardYear = document.getElementById("cardYear");
-let duplicateCardYear = document.getElementById("duplicateCardYear");
-
-cardYear.addEventListener('keyup',() => {
-    duplicateCardYear.value = "/" + cardYear.value;
-});*/
-
-// card CVC duplicate
-
 let cardCvc = document.getElementById("cardCvc");
 let duplicateCardCvc = document.getElementById("duplicateCardCvc");
 
@@ -157,3 +145,16 @@ function validateCardCvc () {
     }
 }
 
+function finished () {
+
+    if (valideForm() == true){
+    document.getElementById("creditCardBox").style.display = "none";
+    document.getElementById("complete").style.display = "inline-block";
+    } 
+     
+}
+
+function back () {
+    document.getElementById("complete").style.display = "none";
+    document.getElementById("creditCardBox").style.display = "inline-block";
+}
