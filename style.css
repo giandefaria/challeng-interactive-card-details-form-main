@@ -6,7 +6,11 @@ body {
 }
 
 ::placeholder {
-    color: hsl(279, 6%, 55%);
+    color: hsl(270, 3%, 87%)
+}
+
+.front-card ::placeholder, .back-card ::placeholder {
+    color: white;
 }
 
 input {
