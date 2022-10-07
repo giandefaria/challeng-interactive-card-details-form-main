@@ -66,19 +66,20 @@ function containsAnyNumbers(string) {
     return /[0-9]/.test(string);
 }
 
-
-function validateCardNumber () {
-    let cardNumberValue = document.getElementById("cardNumber").value;
-    let error = document.getElementById("error2");
-
-    if (containsAnyLetters(cardNumberValue)) {
-        error.textContent ="Wrong format, numbers only";
-        document.getElementById("cardNumber").style.borderColor = "hsl(0, 100%, 66%)";
-    } else {
-        error.textContent =""
-        document.getElementById("cardNumber").style.borderColor = "hsl(270, 3%, 87%)";
-      }
+function containsEmpty(string) {
+    return /[\S]/.test(string);
 }
+
+function valideForm() {
+    
+    if ( (validateCardHolder () ||
+     validateCardNumber () || validateCardMonth() || validateCardYear() || validateCardCvc() ) == 1) {
+        return false;
+     } else {
+     return true;
+     }
+}
+
 
 function validateCardHolder () {
     let cardHolder = document.getElementById("cardHolder").value;
@@ -87,15 +88,29 @@ function validateCardHolder () {
     if (containsAnyNumbers(cardHolder)) {
         error.textContent = "Wrong format, letters only";
         document.getElementById("cardHolder").style.borderColor = "hsl(0, 100%, 66%)";
+        return 1;
+
     } else {
         error.textContent = "";
         document.getElementById("cardHolder").style.borderColor = "hsl(270, 3%, 87%)";
-    }
+      }
 }
 
-function containsEmpty(string) {
-    return /[\S]/.test(string);
+function validateCardNumber () {
+    let cardNumberValue = document.getElementById("cardNumber").value;
+    let error = document.getElementById("error2");
+
+    if (containsAnyLetters(cardNumberValue) || cardNumberValue.length < 19) {
+        error.textContent ="Wrong format! Numbers only and 16 numbers";
+        document.getElementById("cardNumber").style.borderColor = "hsl(0, 100%, 66%)";
+        return 1;
+                
+    } else {
+        error.textContent =""
+        document.getElementById("cardNumber").style.borderColor = "hsl(270, 3%, 87%)";
+      }
 }
+
 
 function validateCardMonth () {
     let cardMonth = document.getElementById("cardMonth").value;
@@ -104,9 +119,11 @@ function validateCardMonth () {
     if(containsEmpty(cardMonth)) {
         error.textContent ="";
         document.getElementById("cardMonth").style.borderColor = "hsl(270, 3%, 87%)";
+        
     } else {
         error.textContent = "Can't be blank";
         document.getElementById("cardMonth").style.borderColor = "hsl(0, 100%, 66%)";
+        return 1;
     }
 }
 
@@ -117,9 +134,11 @@ function validateCardYear () {
     if(containsEmpty(cardYear)) {
         error.textContent ="";
         document.getElementById("cardYear").style.borderColor = "hsl(270, 3%, 87%)";
+        
     } else {
         error.textContent = "Can't be blank";
         document.getElementById("cardYear").style.borderColor = "hsl(0, 100%, 66%)";
+        return 1;
     }
 }
 
@@ -130,8 +149,11 @@ function validateCardCvc () {
     if(containsEmpty(cardCvc)) {
         error.textContent ="";
         document.getElementById("cardCvc").style.borderColor = "hsl(270, 3%, 87%)";
+        
     } else {
         error.textContent = "Can't be blank";
         document.getElementById("cardCvc").style.borderColor = "hsl(0, 100%, 66%)";
+        return 1;
     }
 }
+
