@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <link rel="stylesheet" href="reset.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Credit card project</title>
+    <link rel="icon" href="images/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,24 +16,25 @@
 <body>
     <img class="background-desktop" src="images/bg-main-desktop.png" alt="background">
 
-    <form class="creditCardBox" onclick="validateCardHolder(), validateCardNumber(), validateCardMonth (), validateCardYear (), validateCardCvc ()" onsubmit= "return valideForm()">
+    <form style="display: inline-block" id="creditCardBox" onclick="validateCardHolder(), validateCardNumber(), validateCardMonth (), validateCardYear (), validateCardCvc ()" onsubmit= "return valideForm()">
         <div>
             <label for="cardHolder">CARDHOLDER NAME</label>
             <br>
             <input id="cardHolder" type="text" placeholder="Card holder name" onkeyup="validateCardHolder()">
             <span id="error1"></span>
-            <br><br>
+            <br><br><br>
             <label for="cardNumber">CARD NUMBER</label>
             <br>
             <input id="cardNumber" type="text" placeholder="Card number" maxlength="19" onkeyup="formatCreditCard(), validateCardNumber()">
             <span id="error2"></span>
-            <br><br>
+            <br><br><br>
         </div>
 
         <div class="cardDate">
             <label for="cardYear">EXP. DATE (MM/YY)</label><br>
             <input id="cardMonth" type="text" placeholder="MM" maxlength="2" onkeyup="validateCardMonth ()"> <input id="cardYear" type="text" placeholder="YY" maxlength="2" onkeyup="validateCardYear ()">
             <br><span id="error3"></span>
+            <br><br>
         </div>
 
         <div class="cvc">
@@ -40,14 +42,19 @@
             <input id="cardCvc" type="text" placeholder="e.g. 123" maxlength="3" onkeyup="validateCardCvc ()">
             <br><span id="error4"></span>
         </div>
-        <input type="submit" value="Confirm">
-    </form>    
-        
-       
-    
-
+        <input onclick="finished(); return false" class="submit" type="submit" value="Confirm" >
+    </form>
+    <div style="display: none" id="complete">
+        <img src="images/icon-complete.svg" alt="complete icon" id="complete-icon">
+        <h1>THANK YOU!</h1>
+        <br>
+        <p>We've added your card details</p>
+        <input onclick="back()" type="button" value="Continue" class="submit">
+    </div>    
+ 
     <div class="front-card">
     <img src="images/bg-card-front.png" alt="front card">
+    <img src="images/card-logo.svg" alt="card logo" id="card-logo">
     <input type="text" id="duplicateCardHolder" placeholder="NAME">
     <input type="text" id="duplicateCardNumber" placeholder="0000 0000 0000 0000">
     <input type="text" id="duplicateCardMonth" placeholder="MM/YY"> 

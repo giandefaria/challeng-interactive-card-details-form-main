@@ -2,7 +2,9 @@ body {
     width: 1440px;
     font-family: 'Space Grotesk', sans-serif;
     
+    
 }
+
 ::placeholder {
     color: hsl(0, 0%, 100%);
 }
@@ -14,6 +16,7 @@ input {
 
 .background-desktop {
     float: left;
+    height: 1000px;
 }
 
 .front-card {
@@ -23,25 +26,64 @@ input {
     top: 200px;
 }
 
-.creditCardBox {
+#card-logo {
+    position: absolute;
+    left: 30px;
+    top: 28px;
+}
+
+
+#creditCardBox {
     box-sizing: border-box;
     width: 350px;
     height: 300px;
     display: inline-block;
+    display: none;
     position: relative;
-    top: 340px;
+    top: 320px;
     left: 350px;
+    font-size: smaller;
+    letter-spacing: 1px;
+
+}
+
+#complete {
+    box-sizing: border-box;
+    width: 350px;
+    height: 300px;
+    display: none;
+    position: relative;
+    top: 320px;
+    left: 350px;
+    font-size: medium;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#complete h1 {
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    margin: 35px 0 0 0;
+
+}
+
+#complete p {
+    color: hsl(279, 6%, 55%);
+    margin: 0 0 50px 0;
+}
+
+#creditCardBox input {
+
+    border-radius: 7px;
+    border-style: solid;
+    border-width: thin;
+    border-color: hsl(270, 3%, 87%);
 
 }
 
 #cardHolder, #cardNumber {
     width: 344px;
     height: 35px;
-    border-radius: 7px;
-    border-style: solid;
-    border-width: thin;
-    border-color: hsl(270, 3%, 87%);
-    /*border-color: hsl(278, 94%, 30%); ao ser selecionada */
     margin-top: 7px;
     margin-bottom: 0px;
     cursor: pointer;
@@ -55,11 +97,6 @@ input {
 #cardYear, #cardMonth {
     width: 70px;
     height: 35px;
-    border-radius: 7px;
-    border-style: solid;
-    border-width: thin;
-    border-color: hsl(270, 3%, 87%);
-    /*border-color: hsl(278, 94%, 30%); ao ser selecionada */
     margin-top: 7px;
     margin-bottom: 0px;
 
@@ -73,16 +110,11 @@ input {
 #cardCvc {
     width: 168px;
     height: 35px;
-    border-radius: 7px;
-    border-style: solid;
-    border-width: thin;
-    border-color: hsl(270, 3%, 87%);
-    /*border-color: hsl(278, 94%, 30%); ao ser selecionada */
     margin-top: 7px;
     margin-bottom: 0px;
 }
 
-input[type=submit] {
+.submit {
     display: block;
     margin: 20px auto;
     background-color: hsl(278, 68%, 11%);
@@ -90,14 +122,14 @@ input[type=submit] {
     font-size: medium;
     width: 350px;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 7px;
     cursor: pointer;
 }
 
 span {
     font-family: 'Space Grotesk', sans-serif;
     color: hsl(0, 100%, 66%);
-    font-size: small;
+    font-size: smaller;
 }
 
 #duplicateCardHolder {
@@ -135,19 +167,6 @@ span {
     margin: 0;
     padding: 0;
 }
-
-/*#duplicateCardYear{
-    background: transparent;
-    border-style: none;
-    color: hsl(0, 0%, 100%);
-    letter-spacing: 2px;
-    position: absolute;
-    left: 380px;
-    top: 200px;
-    width: 40px;
-    padding: 0;
-    margin: 0;
-}*/
 
 .back-card {
     position: absolute;
