@@ -15,7 +15,7 @@
 <body>
     <img class="background-desktop" src="images/bg-main-desktop.png" alt="background">
 
-    <form class="creditCardBox" onclick="validateCardMonth (), validateCardYear (), validateCardCvc ()">
+    <form class="creditCardBox" onclick="validateCardHolder(), validateCardNumber(), validateCardMonth (), validateCardYear (), validateCardCvc ()" onsubmit= "return valideForm()">
         <div>
             <label for="cardHolder">CARDHOLDER NAME</label>
             <br>
