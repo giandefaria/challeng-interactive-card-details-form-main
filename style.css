@@ -23,6 +23,11 @@ input {
     height: 1000px;
 }
 
+.background-mobile{
+    display: none;
+
+}
+
 .front-card {
     font-family: 'Space Grotesk', sans-serif;
     position: absolute;
@@ -32,12 +37,15 @@ input {
 
 #card-logo {
     position: absolute;
-    left: 30px;
-    top: 28px;
+    width: 19%;
+    left: 7%;
+    top: 10%;
 }
 
 
 #creditCardBox {
+    display: block;
+    margin: auto;
     box-sizing: border-box;
     width: 350px;
     height: 300px;
@@ -52,6 +60,8 @@ input {
 }
 
 #complete {
+    display: block;
+    margin: auto;
     box-sizing: border-box;
     width: 350px;
     height: 300px;
@@ -120,7 +130,7 @@ input {
 
 .submit {
     display: block;
-    margin: 20px auto;
+    margin: 20px 0;
     background-color: hsl(278, 68%, 11%);
     color: hsl(0, 0%, 100%);
     font-size: medium;
@@ -142,21 +152,21 @@ span {
     color: hsl(0, 0%, 100%);
     letter-spacing: 2px;
     position: absolute;
-    left: 35px;
-    top: 200px;
+    left: 7%;
+    top: 80%;
     
 }
 
 #duplicateCardNumber {
-    width: 400px;
+    width: 85%;
     background: transparent;
     border-style: none;
     color: hsl(0, 0%, 100%);
     letter-spacing: 2px;
-    font-size: 27px;
+    font-size: 1.68em;
     position: absolute;
-    left: 35px;
-    top: 140px;
+    left: 7%;
+    top: 55%;
 }
 
 #duplicateCardMonth{
@@ -165,8 +175,8 @@ span {
     color: hsl(0, 0%, 100%);
     letter-spacing: 2px;
     position: absolute;
-    left: 350px;
-    top: 200px;
+    left: 80%;
+    top: 80%;
     width: 150px;
     margin: 0;
     padding: 0;
@@ -185,10 +195,65 @@ span {
     color: hsl(0, 0%, 100%);
     letter-spacing: 2px;
     position: absolute;
-    left: 360px;
-    top: 112px;
+    left: 80%;
+    top: 45%;
     width: 80px;
     padding: 0;
     margin: 0;
 }
+
+
+/*CSS Mobile*/
+
+
+@media screen and (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+
+    .background-desktop {
+        display: none;
+    }
+    .background-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .front-card {
+        width: 77%;
+        left: 20px;
+        top: 17%;
+    }
+
+    #image-front-card {
+        width: 100%;
+    }
+    #duplicateCardNumber {
+        font-size: 1.1rem;
+    }
+
+    #duplicateCardCvc, #duplicateCardHolder, #duplicateCardMonth {
+        font-size: 0.6rem;
+    }
+
+
+    .back-card {
+        width: 70%;
+        position: absolute;
+        left: 93px;
+        top: 5%;
+    }
+    #image-back-card {
+        width: 100%;
+    }
+
+    #creditCardBox, #complete {
+        top: 80px;
+        left: 1%;
+    }
+
+
+
+}
+
 
