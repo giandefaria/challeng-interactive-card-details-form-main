@@ -14,9 +14,11 @@
     
 </head>
 <body>
-    <img class="background-desktop" src="images/bg-main-desktop.png" alt="background">
-
-    <form style="display: inline-block" id="creditCardBox" onclick="validateCardHolder(), validateCardNumber(), validateCardMonth (), validateCardYear (), validateCardCvc ()" onsubmit= "return valideForm()">
+    <div>
+        <img class="background-desktop" src="images/bg-main-desktop.png" alt="background">
+        <img class="background-mobile"  src="images/bg-main-mobile.png" alt="background">
+    </div>
+    <form style="display: block" id="creditCardBox" onclick="validateCardHolder(), validateCardNumber(), validateCardMonth (), validateCardYear (), validateCardCvc ()" onsubmit= "return valideForm()">
         <div>
             <label for="cardHolder">CARDHOLDER NAME</label>
             <br>
@@ -52,19 +54,21 @@
         <input onclick="back()" type="button" value="Continue" class="submit">
     </div>    
  
-    <div class="front-card">
-    <img src="images/bg-card-front.png" alt="front card">
-    <img src="images/card-logo.svg" alt="card logo" id="card-logo">
-    <input type="text" id="duplicateCardHolder" placeholder="NAME">
-    <input type="text" id="duplicateCardNumber" placeholder="0000 0000 0000 0000">
-    <input type="text" id="duplicateCardMonth" placeholder="MM/YY"> 
-    </div>
-
     <div class="back-card">
-    <img src="images/bg-card-back.png" alt="back card">
-    <input type="number" id="duplicateCardCvc" placeholder="000">
+        <img src="images/bg-card-back.png" alt="back card" id="image-back-card">
+        <input type="number" id="duplicateCardCvc" placeholder="000">
     </div>
 
+    <div class="front-card">
+        <img src="images/bg-card-front.png" alt="front card" id="image-front-card">
+        <img src="images/card-logo.svg" alt="card logo" id="card-logo">
+        <input type="text" id="duplicateCardHolder" placeholder="NAME">
+        <input type="text" id="duplicateCardNumber" placeholder="0000 0000 0000 0000">
+        <input type="text" id="duplicateCardMonth" placeholder="MM/YY"> 
+    </div>
+
+
+    
 
     <script src="script.js"></script>
 </body>
