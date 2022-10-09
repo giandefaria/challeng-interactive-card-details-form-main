@@ -149,12 +149,12 @@ function finished () {
 
     if (valideForm() == true){
     document.getElementById("creditCardBox").style.display = "none";
-    document.getElementById("complete").style.display = "inline-block";
+    document.getElementById("complete").style.display = "block";
     } 
      
 }
 
 function back () {
     document.getElementById("complete").style.display = "none";
-    document.getElementById("creditCardBox").style.display = "inline-block";
+    document.getElementById("creditCardBox").style.display = "block";
 }
