@@ -1,3 +1,31 @@
+const fieldsToDuplicate = document.getElementsByClassName ('duplicate');
+for (var i = 0; i < fieldsToDuplicate.length; i++) {
+    fieldsToDuplicate[i].addEventListener('keydown', function (e) {
+        const t = e.target
+        document.getElementById(`duplicate${t.id.charAt(0).toUpperCase()}${t.id.slice(1)}`).value = t.value;
+
+        console.log(e);
+        console.log(t);
+    });
+    
+    
+}
+
+//function for a space every four chars
+
+
+
+const fieldToSpace = document.getElementById('cardNumber');
+fieldToSpace.addEventListener('keypress', () => {
+    var index = fieldToSpace.value.lastIndexOf(' ');
+    var test = fieldToSpace.value.substr(index + 1);
+    if (test.length === 4 && fieldToSpace.value.length < 16)
+         fieldToSpace.value = fieldToSpace.value + ' ';
+
+})
+
+/*
+
 // card holder duplicate
 let cardHolder = document.getElementById("cardHolder");
 let duplicateCardHolder = document.getElementById("duplicateCardHolder");
@@ -17,14 +45,7 @@ cardNumber.addEventListener('keyup',() => {
 
 //cardNumber.value
 
-//function for a space every four chars
-function formatCreditCard() {
-    var x = document.getElementById("cardNumber");
-    var index = x.value.lastIndexOf(' ');
-    var test = x.value.substr(index + 1);
-    if (test.length === 4 && x.value.length < 16)
-         x.value = x.value + ' ';
-}
+
 
 // card month duplicate
 
@@ -43,6 +64,8 @@ let duplicateCardCvc = document.getElementById("duplicateCardCvc");
 cardCvc.addEventListener('keyup',() => {
     duplicateCardCvc.value = cardCvc.value;
 });
+
+*/
 
 //error scripts
 
