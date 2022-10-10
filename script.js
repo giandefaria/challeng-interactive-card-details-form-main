@@ -13,13 +13,21 @@ for (var i = 0; i < fieldsToDuplicate.length; i++) {
 //function for a space every four chars
 
 const fieldToSpace = document.getElementById('cardNumber');
-fieldToSpace.addEventListener('keydown', () => {
+fieldToSpace.addEventListener('keypress', () => {
     var index = fieldToSpace.value.lastIndexOf(' ');
     var test = fieldToSpace.value.substr(index + 1);
     if (test.length === 4 && fieldToSpace.value.length < 16)
          fieldToSpace.value = fieldToSpace.value + ' ';
 
 })
+
+//mobile keypress not work
+function mobileKey() {
+        var index = fieldToSpace.value.lastIndexOf(' ');
+        var test = fieldToSpace.value.substr(index + 1);
+        if (test.length === 4 && fieldToSpace.value.length < 16)
+             fieldToSpace.value = fieldToSpace.value + ' ';
+}
 
 /*
 
