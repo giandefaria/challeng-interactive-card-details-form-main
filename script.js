@@ -1,19 +1,16 @@
 const fieldsToDuplicate = document.getElementsByClassName ('duplicate');
 for (var i = 0; i < fieldsToDuplicate.length; i++) {
-    fieldsToDuplicate[i].addEventListener('keydown', function (e) {
+    fieldsToDuplicate[i].addEventListener('keyup', function (e) {
         const t = e.target
+        let cardYear = document.getElementById('cardYear');
+        duplicateCardMonth.value = cardMonth.value + "/" + cardYear.value; 
         document.getElementById(`duplicate${t.id.charAt(0).toUpperCase()}${t.id.slice(1)}`).value = t.value;
 
-        console.log(e);
-        console.log(t);
     });
-    
-    
+   
 }
 
 //function for a space every four chars
-
-
 
 const fieldToSpace = document.getElementById('cardNumber');
 fieldToSpace.addEventListener('keypress', () => {
@@ -127,7 +124,7 @@ function validateCardMonth () {
     let cardMonth = document.getElementById("cardMonth").value;
     let error = document.getElementById("error3");
 
-    if(containsEmpty(cardMonth)) {
+    if(containsEmpty(cardMonth) && cardMonth.length == 2) {
         error.textContent ="";
         document.getElementById("cardMonth").style.borderColor = "hsl(270, 3%, 87%)";
         
@@ -142,7 +139,7 @@ function validateCardYear () {
     let cardYear = document.getElementById("cardYear").value;
     let error = document.getElementById("error3");
 
-    if(containsEmpty(cardYear)) {
+    if(containsEmpty(cardYear) && cardYear.length == 2) {
         error.textContent ="";
         document.getElementById("cardYear").style.borderColor = "hsl(270, 3%, 87%)";
         
@@ -157,7 +154,7 @@ function validateCardCvc () {
     let cardCvc = document.getElementById("cardCvc").value;
     let error = document.getElementById("error4");
 
-    if(containsEmpty(cardCvc)) {
+    if(containsEmpty(cardCvc) && cardCvc.length == 3) {
         error.textContent ="";
         document.getElementById("cardCvc").style.borderColor = "hsl(270, 3%, 87%)";
         
