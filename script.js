@@ -124,7 +124,7 @@ function validateCardMonth () {
     let cardMonth = document.getElementById("cardMonth").value;
     let error = document.getElementById("error3");
 
-    if(containsEmpty(cardMonth) && cardMonth.length == 2) {
+    if(containsEmpty(cardMonth) && cardMonth.length == 2 && cardMonth <= 12) {
         error.textContent ="";
         document.getElementById("cardMonth").style.borderColor = "hsl(270, 3%, 87%)";
         
