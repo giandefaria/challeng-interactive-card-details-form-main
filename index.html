@@ -22,26 +22,26 @@
         <div>
             <label for="cardHolder">CARDHOLDER NAME</label>
             <br>
-            <input id="cardHolder" type="text" placeholder="e.g. Bros" onkeyup="validateCardHolder()">
+            <input class="duplicate" id="cardHolder" type="text" placeholder="e.g. Bros" onkeyup="validateCardHolder()">
             <span id="error1"></span>
             <br><br><br>
             <label for="cardNumber">CARD NUMBER</label>
             <br>
-            <input id="cardNumber" type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" onkeyup="formatCreditCard(), validateCardNumber()">
+            <input class="duplicate" id="cardNumber" type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" onkeyup="validateCardNumber()">
             <span id="error2"></span>
             <br><br><br>
         </div>
 
         <div class="cardDate">
             <label for="cardYear">EXP. DATE (MM/YY)</label><br>
-            <input id="cardMonth" type="text" placeholder="MM" maxlength="2" onkeyup="validateCardMonth ()"> <input id="cardYear" type="text" placeholder="YY" maxlength="2" onkeyup="validateCardYear ()">
+            <input class="duplicate" id="cardMonth" type="text" placeholder="MM" maxlength="2" onkeyup="validateCardMonth ()"> <input class="duplicate" id="cardYear" type="text" placeholder="YY" maxlength="2" onkeyup="validateCardYear ()">
             <br><span id="error3"></span>
             <br><br>
         </div>
 
         <div class="cvc">
             <label for="cardCvc">CVC</label><br>
-            <input id="cardCvc" type="text" placeholder="e.g. 123" maxlength="3" onkeyup="validateCardCvc ()">
+            <input class="duplicate" id="cardCvc" type="text" placeholder="e.g. 123" maxlength="3" onkeyup="validateCardCvc ()">
             <br><span id="error4"></span>
         </div>
         <input onclick="finished(); return false" class="submit" type="submit" value="Confirm" >
